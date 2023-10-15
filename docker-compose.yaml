@@ -1,0 +1,22 @@
+version: "3.10"
+services:
+  django-app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: django-cont
+    ports:
+      - 8000:8000
+    networks:
+      - 'utsav-net'
+    volumes:
+      - test:/usr/myapp/static
+
+networks:
+  utsav-net:
+    name: 'utsav-net'
+
+volumes:
+  test:
+    name: 'test'
+    external: true

@@ -2,7 +2,7 @@
 FROM python:3.10.12-alpine
 
 # set work directory
-WORKDIR /usr/app
+WORKDIR /usr/myapp
 
 ADD requirements.txt . 
 # means if requirements.txt changes then only build command install requirements.txt otherwise not
