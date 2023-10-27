@@ -1,6 +1,7 @@
 version: "3.10"
 services:
   django-app:
+    image: 'utsav123/djangok8s:latest'
     build:
       context: .
       dockerfile: Dockerfile
