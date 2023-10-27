@@ -3,16 +3,16 @@ kind: Deployment
 metadata:
   name: django-deployment
   labels:
-    app: django
+    app: django-app
 spec:
   replicas: 3
   selector:
     matchLabels:
-      app: django
+      app: djangos
   template:
     metadata:
       labels:
-        app: django
+        app: djangos
     spec:
       containers:
       - name: django-cont
